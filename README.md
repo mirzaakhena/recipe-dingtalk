@@ -34,3 +34,5 @@ Currently number of unread chat message is read from this element
 <em class="ng-binding"5</em>
 </span>
 ```
+
+Some style is overriden for maximize the view
