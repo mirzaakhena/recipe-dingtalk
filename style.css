@@ -4,9 +4,6 @@
 
 #layout-container #layout-main {
   width: 100%;
-  flex: 0 1 1000px;
+  flex: 0 1 1500px;
 }
 
-#layout-container #layout-main #body{
-  height: 700px;
-}

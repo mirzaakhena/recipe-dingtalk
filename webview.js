@@ -2,6 +2,40 @@ const path = require('path');
 
 module.exports = (Franz) => {
 
+  // #layout-container #layout-main #body
+
+  let checkIsRun = false;
+  checkHeightAction = () => {
+    checkIsRun = true;
+    let checkAgain = 0;
+    let checkHeight = setInterval(() => {
+      let body = document.getElementById('body')
+      if (body) {
+        if (body.style) {
+          const bodyHeight = body.style.height
+          console.log(bodyHeight, window.outerHeight)
+          body.setAttribute('style', 'height:' + (window.outerHeight - 60) + 'px');
+          if (bodyHeight !== '') {
+            if (checkAgain >= 10) {
+              clearInterval(checkHeight);
+              checkIsRun = false;
+            } else {
+              checkAgain++;
+            }
+          }
+        }
+      }
+    }, 1000)
+  }
+
+  checkHeightAction();
+
+  window.addEventListener('resize', () => {
+    if (!checkIsRun) {
+      checkHeightAction();
+    }
+  });
+
   const getMessages = function getMessages() {
 
     // get unread messages
