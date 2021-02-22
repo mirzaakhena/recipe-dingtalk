@@ -2,8 +2,13 @@ module.exports = (Franz) => {
   const getMessages = function getMessages() {
 
     // get unread messages
-    // TODO will find out later
-    const count = 0;
+    let count = 0;
+
+    const x = document.querySelectorAll('.unread-num em.ng-binding')
+    if (x.length > 0) {
+      Franz.setBadge(x[0].innerHTML);
+      return
+    }
 
     // set Franz badge
     Franz.setBadge(count);

@@ -23,4 +23,14 @@ recipes/dev/dingtalk/
 
 Reload the Franz, Open Custom Services, You will see the dark Dingtalk icon. 
 
+icon is taken from
+https://seekicon.com/free-icon/dingtalk-circle-icon_1
 
+Currently number of unread chat message is read from this element
+```
+<span 
+  class="unread-num ng-scope" 
+  ng-if="$ctrl.unreadMsgCount > 0">
+<em class="ng-binding"5</em>
+</span>
+```
