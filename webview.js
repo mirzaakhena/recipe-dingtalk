@@ -1,16 +1,6 @@
 const path = require('path');
-const { remote } = require('electron');
-
-const webContents = remote.getCurrentWebContents();
-const { session } = webContents;
 
 module.exports = (Franz) => {
-
-
-  window.addEventListener('beforeunload', async () => {
-    console.log(session)
-  });
-
 
   const getMessages = function getMessages() {
 

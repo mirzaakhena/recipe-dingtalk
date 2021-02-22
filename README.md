@@ -17,7 +17,7 @@ recipes/dev/dingtalk/
   - index.js
   - package.json
   - README.md
-  - service.css
+  - style.css
   - webview.js
 ```
 
