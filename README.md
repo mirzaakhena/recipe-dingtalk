@@ -1,15 +1,11 @@
 # Dingtalk for Franz
-This is Franz dingtalk recipe
+This is [Franz](https://meetfranz.com/) [Dingtalk](https://www.dingtalk.com/) recipe
 
-![Dark Dingtalk icon](https://github.com/mirzaakhena/recipe-dingtalk/blob/master/icon.png?raw=true)
+![Dingtalk icon](https://github.com/mirzaakhena/recipe-dingtalk/blob/master/icon.png?raw=true)
 
-Put this repo under
+Since this is dingtalk service is not available (yet) through official Franz latest version, You need to put the repo manually under this folder (If this folder is not exist you can create the new one)
 
-```
-~/Library/ApplicationSupport/Franz/recipes/dev/dingtalk
-```
-
-You must have this folder
+`~/Library/ApplicationSupport/Franz/recipes/dev/dingtalk`
 ```
 recipes/dev/dingtalk/
   - icon.svg
@@ -24,15 +20,7 @@ recipes/dev/dingtalk/
 Reload the Franz, Open Custom Services, You will see the Dingtalk icon. 
 
 icon is taken from
-https://seekicon.com/free-icon/dingtalk-circle-icon_1
+* https://imgbin.com/png/YdS2MZ7M/dingtalk-alibaba-group-organization-business-png
+* https://seekicon.com/free-icon/dingtalk-circle-icon_1
 
-Currently number of unread chat message is read from this element
-```
-<span 
-  class="unread-num ng-scope" 
-  ng-if="$ctrl.unreadMsgCount > 0">
-  <em class="ng-binding"5</em>
-</span>
-```
 
-Some style is overriden for maximize the view
