@@ -7,24 +7,14 @@ module.exports = (Franz) => {
   let checkIsRun = false;
   checkHeightAction = () => {
     checkIsRun = true;
-    let checkAgain = 0;
     let checkHeight = setInterval(() => {
-      let body = document.getElementById('body')
-      if (body) {
-        if (body.style) {
-          const bodyHeight = body.style.height
-          console.log(bodyHeight, window.outerHeight)
-          body.setAttribute('style', 'height:' + (window.outerHeight - 60) + 'px');
-          if (bodyHeight !== '') {
-            if (checkAgain >= 10) {
-              clearInterval(checkHeight);
-              checkIsRun = false;
-            } else {
-              checkAgain++;
-            }
-          }
-        }
+      let menuPanel = document.getElementById('menu-pannel')
+      if (!menuPanel) {
+        return
       }
+      menuPanel.parentElement.setAttribute('style', 'height:' + (window.outerHeight - 60) + 'px');
+      clearInterval(checkHeight);
+      checkIsRun = false
     }, 1000)
   }
 
